@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const yesButton = document.querySelector(".choice-box button:first-child");
     const noButton = document.querySelector(".choice-box button:last-child");
 
-    let partnerName = "JILLIAN"; // Replace with dynamic value
+    let partnerName = "Nishuu"; // Replace with dynamic value
     let noClickCount = 0; // Counter for No button clicks
 
     // Function to create typewriter effect
@@ -33,8 +33,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to handle the click event
     function revealChoices() {
-        audio.pause(); // Stop background music
-        audio.currentTime = 0; // Reset music
+
+        const audio = document.getElementById('background-music');
+    audio.currentTime = 0;
+    audio.play().catch(err => console.log("Audio blocked:", err));
 
         videoCard.classList.remove("hide"); // Show video card
         video.play(); // Play the funny video
@@ -75,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     
     yesButton.addEventListener("click", function () {
-        questionText.innerHTML = `<span class="partner-name">${partnerName}</span><br><span class="love-text">I love you baby ❤️</span>`;
+        questionText.innerHTML = `<span class="partner-name">${partnerName}</span><br><span class="love-text">I love you Shona ❤️</span>`;
         choiceBox.style.display = "none"; // Hide choices
         threedBox.classList.remove("hide");
 

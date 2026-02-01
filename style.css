@@ -4,18 +4,34 @@
     box-sizing: border-box;
 }
 
-:root {
-    --font-heading: 'Playfair Display', serif; /* For headings */
-    --font-body: 'Quicksand', sans-serif; /* For body text */
-    --color-bg1: #FFE6E6;  /* Soft Blush */
-    --color-bg2: #FFC2C2;  /* Light Pink */
-    --color1: #FFB3B3;     /* Soft Pink */
-    --color2: #FF9999;     /* Warm Pink */
-    --color3: #FF6666;     /* Romantic Red */
-    --color4: #FF4D4D;     /* Rich Red */
-    --color5: #333333;     /* Dark Gray for text */
-    --color-interactive: #FF8080; /* Interactive Pink */
+:root{
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Quicksand', sans-serif;
+
+  --color-bg1: #fff1f6;   /* blush */
+  --color-bg2: #f3e8ff;   /* lavender */
+  --color1:   #ffd6e7;    /* soft pink */
+  --color2:   #d9c6ff;    /* soft purple */
+  --color3:   #ff7aa8;    /* accent pink */
+  --color4:   #ff4d88;    /* deeper accent */
+  --color5:   #2b2b2b;    /* text */
 }
+
+body::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.55), transparent 40%),
+    radial-gradient(circle at 80% 20%, rgba(255,255,255,0.35), transparent 45%),
+    radial-gradient(circle at 60% 80%, rgba(255,255,255,0.25), transparent 50%);
+  opacity: 0.7;
+  filter: blur(2px);
+  z-index: 0;
+}
+.body-wrapper{ z-index: 1; }
+
 
 /* Body and Background */
 body {
@@ -428,3 +444,22 @@ footer {
         opacity: 0;
     }
 }
+.photo-card{
+  width: 220px;
+  height: 220px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.18);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+  margin-bottom: 18px;
+  transform: rotate(-1deg);
+}
+
+.photo-card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+

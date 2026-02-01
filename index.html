@@ -12,16 +12,18 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
 
-    <title>LoveOh</title>
-    <meta name="description" content="Create and send a personalized Valentine's Day card with beautiful animation. It's a lovely gift idea for couples or friends!" />
+    <title>Will you be my Valentine? 💘</title>
+    <meta name="description" content="A tiny page made with love." />
 </head>
 
 <body>
 
-    <audio id="background-music">
-        <source src="/assets/intro.mp3" type="audio/mpeg">
-        Your Browser does not supprt the audio element.
-    </audio>
+    <audio id="background-music" preload="metadata" loop controls>
+  <source src="assets/intro.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+
     
     <!-- Heart-shaped SVG as a background -->
     <div class="heart-background">
@@ -38,12 +40,6 @@
     </div>
 
     <div class="body-wrapper background">
-        <nav>
-            <div class="navbar-wrapper">
-                <div class="navlogo"><h2>LoveOh</h2></div>
-                <div class="navlinks"><a href=".">Refresh</a></div>
-            </div>
-        </nav>
 
         <div class="main-wrapper">
             <div class="aside-wrapper">
@@ -52,7 +48,9 @@
                         <div class="aside left hide">
                             <div class="video-card">
                                 <div class="glare"></div>
-                                <video src="/assets/funny video.mp4"></video>
+                                <video id="funny-video" preload="metadata" playsinline>
+                                    <source src="assets/funny%20video.mp4" type="video/mp4">
+                                </video>
                             </div>
                         </div>
                     </div>
@@ -60,14 +58,12 @@
             </div>
 
             <div class="main-section-wrapper">
-                <div class="threed-wrapper">
-                    <div class="threed-box hide">
-                        <img src="assets/bears.gif" alt="Cute bears kissing">
-                    </div>
+                <div class="photo-card">
+                    <img src="assets/our-photo.jpg" alt="Us" />
                 </div>  
                 <div class="question-wrapper">
                     <div class="question-box">
-                        <h1>I Have a Question to Ask!!!</h1>
+                        <h1>Anisha, I Have a Question to Ask!!!</h1>
                     </div>
                 </div>  
                 <div class="choice-wrapper">
@@ -94,7 +90,6 @@
         </div>
 
         <footer>
-            <a href="https://github.com/2bTwist/Valentines-Day-Web-Project" target="_blank"><p>Designed by E <i style="font-size:20px" class="fa">&#xf09b;</i></p></a>
         </footer>
     </div>
     
